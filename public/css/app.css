@@ -1,0 +1,106 @@
+body {
+  background-color: #184490;
+  color: rgba(255, 255, 255, 0.5); /* Slightly faded white text */
+  display: flex; /* Use flexbox to center content */
+  flex-direction: column; /* Allows body to have a column layout to separate nav and main */
+  justify-content: flex-start; /* Align content to the top of the page */
+  align-items: center; /* Center horizontally */
+  min-height: 100vh; /* Full viewport height */
+  margin: 0; /* Remove default margin */
+  font-family:Verdana, Geneva, Tahoma, sans-serif
+}
+
+/* Navigation Bar Styles */
+header {
+  background-color: #2966d1; /* Dark gray background */
+  color: #ffffff; /* White text color */
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 50; /* Ensure it stays on top of other content */
+  width: 100%; /* Full width */
+  padding: 5px; /* Padding for content inside the navbar */
+  display: flex; /* Use flexbox for alignment */
+  justify-content: space-between; /* Space between the brand and the nav items */
+  align-items: center; /* Center vertically */
+}
+
+/* Style for the website name */
+header .brand {
+  font-size: 1.5rem; /* Increase the font size for the brand name */
+  font-weight: bold; /* Make the brand name bold */
+}
+
+/* Navigation menu */
+nav {
+  display: flex; /* Use flexbox for nav items */
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 24px;
+  margin-left: 1100px;
+  display: flex; /* Display list items in a row */
+  gap: 1rem; /* Space between navigation items */
+}
+
+nav ul li {
+  display: inline;
+}
+
+nav ul li a {
+  color: #ffffff; /* White text*/
+}
+
+/* Main content padding to accommodate fixed navbar */
+main {
+  padding-top: 5rem; /* Adjust this to match the height of the navbar plus some spacing */
+  width: 100%; /* Ensure it uses full width */
+  max-width: 1200px; /* Optional: limit max width for better readability */
+  margin: 0 auto; /* Center the main content */
+}
+
+/* Container for the gallery */
+.game-gallery {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+/* Each game item */
+.game-item {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  justify-content: space-between;
+  margin-bottom: 10px; /* Adds space between game items */
+}
+
+/* Style for the images */
+.game-img, .game-image img {
+  max-width: 450px; /* Sets a maximum width for the image */
+  width: 100%; /* Ensures the image is responsive */
+  height: auto; /* Maintains the aspect ratio */
+  border-radius: 8px; /* Optional: adds rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: adds a subtle shadow */
+}
+
+/* Style for the description */
+.game-description {
+  flex: 1;
+  max-width: 600px; /* Ensures the text doesn't get too wide */
+  margin-left: 10px; /* Space between the image and description */
+}
+
+/* Add padding and margin to description */
+.game-description h2 {
+  font-size: 1.5rem;
+  color: #000000;
+}
+
+.game-description p {
+  margin-top: 0.5rem;
+  color: #ffffff;
+}
