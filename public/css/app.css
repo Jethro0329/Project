@@ -1,40 +1,42 @@
 body {
-  background-color: #184490;
-  color: rgba(255, 255, 255, 0.5); /* Slightly faded white text */
-  display: flex; /* Use flexbox to center content */
-  flex-direction: column; /* Allows body to have a column layout to separate nav and main */
-  justify-content: flex-start; /* Align content to the top of the page */
-  align-items: center; /* Center horizontally */
-  min-height: 100vh; /* Full viewport height */
-  margin: 0; /* Remove default margin */
-  font-family:Verdana, Geneva, Tahoma, sans-serif
+  background-image: url('/img/bg.jpg'); 
+  background-size: cover; 
+  background-position: center; 
+  background-repeat: no-repeat; 
+  background-attachment: fixed; 
+  color: rgb(255, 255, 255); 
+  display: flex; 
+  flex-direction: column; 
+  justify-content: flex-start; 
+  align-items: center; 
+  min-height: 100vh; 
+  margin: 0; 
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-/* Navigation Bar Styles */
 header {
-  background-color: #2966d1; /* Dark gray background */
-  color: #ffffff; /* White text color */
+  background-color: #544184; 
+  color: #ffffff; 
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
-  z-index: 50; /* Ensure it stays on top of other content */
-  width: 100%; /* Full width */
-  padding: 5px; /* Padding for content inside the navbar */
-  display: flex; /* Use flexbox for alignment */
-  justify-content: space-between; /* Space between the brand and the nav items */
-  align-items: center; /* Center vertically */
+  z-index: 50; 
+  width: 100%; 
+  padding: 5px; 
+  display: flex; 
+  justify-content: space-between; 
+  align-items: center; 
 }
 
-/* Style for the website name */
-header .brand {
-  font-size: 1.5rem; /* Increase the font size for the brand name */
-  font-weight: bold; /* Make the brand name bold */
+header h1 {
+  font-size: 1.5rem; 
+  font-weight: bold; 
+  margin-left: 50px;
 }
 
-/* Navigation menu */
 nav {
-  display: flex; /* Use flexbox for nav items */
+  display: flex; 
 }
 
 nav ul {
@@ -42,8 +44,8 @@ nav ul {
   padding: 0;
   margin: 24px;
   margin-left: 1100px;
-  display: flex; /* Display list items in a row */
-  gap: 1rem; /* Space between navigation items */
+  display: flex; 
+  gap: 1rem; 
 }
 
 nav ul li {
@@ -51,50 +53,80 @@ nav ul li {
 }
 
 nav ul li a {
-  color: #ffffff; /* White text*/
+  color: #ffffff; 
+  text-decoration: none; 
+  transition: color 0.3s; 
 }
 
-/* Main content padding to accommodate fixed navbar */
+nav ul li a:hover {
+  color: #dcdcdc; 
+}
+
 main {
-  padding-top: 5rem; /* Adjust this to match the height of the navbar plus some spacing */
-  width: 100%; /* Ensure it uses full width */
-  max-width: 1200px; /* Optional: limit max width for better readability */
-  margin: 0 auto; /* Center the main content */
+  padding-top: 5rem; 
+  width: 100%; 
+  max-width: 1200px; 
+  margin: 0 auto; 
+  text-align: center; 
 }
 
-/* Container for the gallery */
+.min-h-screen {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+button {
+  background-color: #35255e;
+  color: white;
+  padding: 0.5rem 1.5rem;
+  border: none;
+  border-radius: 0.375rem;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+  display: inline-block; 
+}
+
+button:hover {
+  background-color: black;
+  color: white;
+}
+
 .game-gallery {
   display: flex;
   flex-direction: column;
   gap: 2rem;
 }
 
-/* Each game item */
 .game-item {
   display: flex;
+  flex-direction: row;
   align-items: center;
   gap: 2rem;
-  justify-content: space-between;
-  margin-bottom: 10px; /* Adds space between game items */
+  justify-content: flex-start;
+  margin-bottom: 10px; 
+  width: 100%; 
 }
 
-/* Style for the images */
-.game-img, .game-image img {
-  max-width: 450px; /* Sets a maximum width for the image */
-  width: 100%; /* Ensures the image is responsive */
-  height: auto; /* Maintains the aspect ratio */
-  border-radius: 8px; /* Optional: adds rounded corners */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: adds a subtle shadow */
+.game-item p {
+  text-align: justify; 
 }
 
-/* Style for the description */
+.game-img {
+  max-width: 300px; 
+  width: 100%; 
+  height: auto; 
+  border-radius: 8px; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+  margin-right: 2rem; 
+}
+
 .game-description {
-  flex: 1;
-  max-width: 600px; /* Ensures the text doesn't get too wide */
-  margin-left: 10px; /* Space between the image and description */
+  flex: 1; 
+  max-width: 600px; 
 }
 
-/* Add padding and margin to description */
 .game-description h2 {
   font-size: 1.5rem;
   color: #000000;
@@ -103,4 +135,5 @@ main {
 .game-description p {
   margin-top: 0.5rem;
   color: #ffffff;
+  text-align: justify; 
 }
