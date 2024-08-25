@@ -2,7 +2,7 @@
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gallery of Games</title>
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 </head>
@@ -22,7 +22,7 @@
         <div class="min-h-screen bg-gradient-to-b from-transparent via-white to-white dark:via-zinc-900 dark:to-zinc-900">
             <div class="container mx-auto px-4 py-8 text-center">
                 <h1 class="text-4xl font-semibold dark:text-white">Game Reviews</h1>
-                <p class="text-xl mt-4 dark:text-white/70">See my reviewsw on some great games.</p>
+                <p class="text-xl mt-4 dark:text-white/70">See my reviews on some great games.</p>
                 
                 <div class="game-gallery mt-8 space-y-12">
                     <div class="game-item flex flex-col md:flex-row items-center space-y-4 md:space-y-0 md:space-x-8">
