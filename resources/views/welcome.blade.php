@@ -6,16 +6,16 @@
     <title>Gallery of Games</title>
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 </head>
-<body class="font-sans antialiased dark:bg-black dark:text-white/50">
-    <header class="bg-gray-800 text-white fixed w-full z-50">
-        <nav class="container mx-auto px-4 py-4 flex justify-between items-center">
-            <h1 class="text-2xl font-bold">Jet's Gaming Hub</h1>
-            <ul class="flex space-x-6">
-                <li><a href="{{ url('/') }}" class="hover:text-gray-400">Homepage</a></li>
-                <li><a href="{{ url('resources/views/gallery.blade.php') }}" class="hover:text-gray-400">Gallery</a></li>
-                <li><a href="{{ url('resources/views/review.blade.php') }}" class="hover:text-gray-400">Reviews</a></li>
-            </ul>
-        </nav>
+<body class="homepage">
+    <header>
+        <div class="header-container">
+            <h1>Jet's Gaming Hub</h1>
+            <nav>
+                <a href="{{ url('/') }}">Homepage</a>
+                <a href="{{ url('resources/views/gallery.blade.php') }}">Gallery</a>
+                <a href="{{ url('resources/views/review.blade.php') }}">Reviews</a>
+            </nav>
+        </div>
     </header>
 
     <main>
