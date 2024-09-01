@@ -14,7 +14,12 @@ Route::get('resources/views/review.blade.php', function () {
     return view('review');
 });
 
-// web.php
-Route::get('/user/{username?}', function ($username = 'Guest') {
+Route::get('/user', function () {
+    $username = request()->input('username', 'Guest');
+    
+    if (!preg_match('/^[A-Za-z]+$/', $username)) {
+        $username = 'Guest'; 
+    }
+
     return view('user', ['username' => $username]);
-})->where('username', '[A-Za-z]+');
+});

@@ -7,7 +7,7 @@
     <title>Welcome User</title>
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 </head>
-<body class="font-sans antialiased dark:bg-black dark:text-white/50">
+<body class="homepage">
     <header>
         <div class="header-container">
             <h1>Jet's Gaming Hub</h1>
@@ -20,21 +20,9 @@
     </header>
 
     <main class="main-content">
-        <div class="min-h-screen flex items-center justify-center bg-gradient-to-b from-transparent via-white to-white dark:via-zinc-900 dark:to-zinc-900">
-            <div class="text-center">
-                <h1 class="text-4xl font-semibold text-black dark:text-white">Welcome, {{ $username }}!</h1>
-                
-                <a href="{{ url('resources/views/gallery.blade.php') }}">
-                    <button class="mt-6 px-6 py-2 bg-[#FF2D20] text-white rounded-md hover:bg-black hover:text-white transition duration-300">Explore Now</button>
-                </a>
-            </div>
-        </div>
+        <h1>Welcome, {{ $username }}</h1>
+        <p>Enjoy exploring the gaming hub, {{ $username }}!</p>
+        <button class="button" onclick="location.href='{{ url('resources/views/gallery.blade.php') }}'">Explore Gallery</button>
     </main>
-
-    <footer>
-        <div class="footer-container">
-            <p>&copy; 2024 Jet's Gaming Hub. All rights reserved.</p>
-        </div>
-    </footer>
 </body>
 </html>

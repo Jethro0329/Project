@@ -18,19 +18,16 @@
         </div>
     </header>
 
-    <main>
-        <div class="min-h-screen flex items-center justify-center bg-gradient-to-b from-transparent via-white to-white dark:via-zinc-900 dark:to-zinc-900">
-            <div class="text-center">
-                <h1 class="text-4xl font-semibold text-black dark:text-white">Welcome to Jet's Gaming Hub</h1>
-                <p class="text-xl mt-4 text-black dark:text-white/70">Your destination for gaming reviews, and more!</p>
-                
-                <!-- User Input Form -->
-                <form action="{{ url('/user') }}" method="GET" class="mt-6">
-                    <input type="text" name="username" placeholder="Enter your name" class="px-4 py-2 rounded-md border border-gray-300 text-black" required>
-                    <button type="submit" class="px-6 py-2 bg-[#FF2D20] text-white rounded-md hover:bg-black hover:text-white transition duration-300">Submit</button>
-                </form>
-            </div>
-        </div>
+    <main class="main-content">
+        <h1>Welcome to Jet's Gaming Hub</h1>
+        <p>Discover the latest and greatest in gaming!</p>
+        <form action="{{ url('/user') }}" method="GET">
+            <label for="username">Enter your username:</label>
+            <input type="text" name="username" id="username" pattern="[A-Za-z]+" title="Only alphabetic characters are allowed">
+            <br><br>
+            <button type="submit">Submit</button>
+        </form>
     </main>
+
 </body>
 </html>
